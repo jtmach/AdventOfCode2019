@@ -1,20 +1,21 @@
-total = 0
+def calculateFuel(weight):
+  return int(weight / 3)-2
 
 # Part 1
+total = 0
 with open("/Users/a318196/Code/AdventOfCode2020/20191201/input.txt") as file:
     for line in file:
-        total += int((int(line) / 3))-2
+        total += calculateFuel(int(line))
 print ('Total part 1: ' + str(total))
 
-total = 0
  # Part 2
+total = 0
 with open("/Users/a318196/Code/AdventOfCode2020/20191201/input.txt") as file:
     for line in file:
-        fuel = int((int(line) / 3))-2
-        additionalFuel = 0
-        additionalFuel = int(int(fuel / 3) - 2)
+        fuel = calculateFuel(int(line))
+        additionalFuel = calculateFuel(fuel)
         while additionalFuel > 0:
             fuel += additionalFuel
-            additionalFuel = int(additionalFuel / 3) - 2
+            additionalFuel = calculateFuel(additionalFuel)
         total += fuel
 print ('Total part 2: ' + str(total))
