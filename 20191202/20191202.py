@@ -16,6 +16,7 @@ while position < len(inputArray):
 print('Solution 1: ' + str(inputArray[0]))
 
 # Solution 2
+stopNumber = 19690720
 noun = 0
 while noun <= 99:
     verb = 0
@@ -36,10 +37,10 @@ while noun <= 99:
                 position += 4
             if (inputArray[position] == 99):
                 position = len(inputArray)
-        if (inputArray[0] == 19690720):
+        if (inputArray[0] == stopNumber):
             break
         verb += 1
-    if (inputArray[0] == 19690720):
+    if (inputArray[0] == stopNumber):
         break
     noun += 1
 print('Solution 2: ' + str(100 * noun + verb))
