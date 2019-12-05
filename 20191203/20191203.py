@@ -32,6 +32,7 @@ def calculatePositions(path, positions):
                 positions.append(str(positionX) + ',' + str(positionY) + ',' + str(moveIndex))
                 index += 1
 
+# This does eventually work, but is way to slow, find a way to refactor
 def findMatches(oArray, xArray):
     matchArray = []
     for oPos in oArray:
